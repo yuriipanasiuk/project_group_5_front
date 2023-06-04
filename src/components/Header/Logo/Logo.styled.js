@@ -4,6 +4,7 @@ export const LogoText = styled.h1`
   font-weight: ${p => p.theme.fontWeight.bold};
   font-size: 28px;
   color: ${p => p.theme.colors.titleColor};
+  cursor: pointer;
 `;
 
 export const LogoSpanLetter = styled.span`

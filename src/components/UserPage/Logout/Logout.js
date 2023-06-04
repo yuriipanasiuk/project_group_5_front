@@ -1,9 +1,10 @@
 import { LogoutButton, LogoutIcon, ButtonText } from './Logout.styled';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import authOperations from '../../../redux/auth/operations';
 
-export const Logout = ({ onClick }) => {
+export const Logout = () => {
   const dispatch = useDispatch();
+
   const handleClick = async () => {
     dispatch(authOperations.logout());
   };
