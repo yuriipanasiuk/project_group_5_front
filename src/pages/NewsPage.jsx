@@ -16,7 +16,7 @@ const NewsPage = () => {
   const search = searchParams.get('search');
 
   useEffect(() => {
-    const BASE_URL = 'https://petssuport4815162342api.onrender.com/api';
+    const BASE_URL = 'https://pets-r6bp.onrender.com/api';
     let searchPath = '/news';
     if (search) {
       searchPath = searchPath + '?search=' + search;
@@ -41,10 +41,12 @@ const NewsPage = () => {
       case 'submit':
         userSearch = e.target.elements.search.value;
         setSearchParams({ search: userSearch });
-            break;
+        break;
       case 'input':
         userSearch = e.target.value.trim();
-        userSearch ? setSearchParams({ search: userSearch }) : setSearchParams({ });
+        userSearch
+          ? setSearchParams({ search: userSearch })
+          : setSearchParams({});
       default:
         return;
     }
@@ -55,7 +57,6 @@ const NewsPage = () => {
     [search]
   );
 
-
   function clearFiltration() {
     setSearchParams({});
   }
@@ -63,7 +64,11 @@ const NewsPage = () => {
   const content = isLoading ? (
     <Loader />
   ) : (
-    <NewsList news={news} onSubmit={debouncedFiltration} onClear={clearFiltration} />
+    <NewsList
+      news={news}
+      onSubmit={debouncedFiltration}
+      onClear={clearFiltration}
+    />
   );
 
   return (

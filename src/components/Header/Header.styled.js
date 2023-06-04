@@ -38,7 +38,6 @@ export const MenuList = styled.div`
 `;
 export const Appbar = styled.div`
   display: flex;
-  /* justify-content: space-between; */
   justify-content: flex-end;
 `;
 
@@ -63,7 +62,6 @@ export const MenuAuthBtnWrap = styled.div`
   flex-direction: row;
   margin-bottom: 60px;
   @media (min-width: ${p => p.theme.screenSizes.desktop}) {
-    /* display: none; */
   }
 `;
 

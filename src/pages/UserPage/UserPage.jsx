@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import authOperations from 'redux/auth/operations';
-import { selectUser, selectIsRefreshing } from 'redux/auth/selectors';
+import { selectUser } from 'redux/auth/selectors';
 
 import { UserData } from 'components/UserPage/UserData/UserData';
 import { PetsData } from 'components/UserPage/PetsData/PetsData';

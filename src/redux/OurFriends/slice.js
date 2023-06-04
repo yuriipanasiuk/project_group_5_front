@@ -6,7 +6,6 @@ const ourFriendsSlice = createSlice({
   initialState: {
     isLoading: false,
     items: [],
-    // error: null,
   },
   extraReducers: {
     [fetchOurFriends.pending](state, action) {

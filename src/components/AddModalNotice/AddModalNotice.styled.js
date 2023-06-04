@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import maleIcon from '../../assets/images/male.png';
 import femaleIcon from '../../assets/images/female.png';
-import { ErrorMessage } from 'formik';
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -28,7 +28,6 @@ export const BtnClose = styled.button`
   border: thick;
   background-color: ${p => p.theme.colors.bgc};
   font-size: initial;
-  /* fill: ${p => p.theme.colors.titleColor}; */
   &:hover,
   &:focus {
     fill: ${p => p.theme.colors.userAddPetBtnBgHover};
@@ -145,7 +144,6 @@ export const RadioButton = styled.div`
 `;
 
 export const InputCont = styled.div`
-  /* width: 100%; */
   box-sizing: border-box;
   &:not(:last-child) {
     margin-bottom: 16px;
@@ -362,10 +360,10 @@ export const PhotoAddContainer = styled.label`
   justify-content: center;
   border-radius: 40px;
   cursor: pointer;
-  // margin: 0 auto;
+
   margin-right: auto;
   box-sizing: border-box;
-  // padding: 22px;
+
   border-radius: 20px;
   background-color: ${p => p.theme.colors.bgc};
   @media screen and (min-width: 768px) {

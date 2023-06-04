@@ -16,7 +16,6 @@ import { noticesReducer } from './notices/noticesSlice';
 import { noticesSearckQueryReducer } from './notices/searchQuerySlice';
 import { formReducer } from './form/formSlice';
 import { toggleMenuReducer } from './menu/menuSlice';
-// import  {petsApi}  from './Pet/PetsApi';
 
 const authPersistConfig = {
   key: 'auth',

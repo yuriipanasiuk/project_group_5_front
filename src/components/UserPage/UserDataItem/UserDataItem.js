@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
+import authOperations from 'redux/auth/operations';
 import {
   UserDataItemWrapper,
   EditButton,
@@ -12,8 +13,6 @@ import {
   UserInfoLabel,
   UserInfoWrapper,
 } from './UserDataItem.styled';
-import authOperations from 'redux/auth/operations';
-import { tr } from 'date-fns/locale';
 
 export const UserDataItem = ({
   isUserEditing,

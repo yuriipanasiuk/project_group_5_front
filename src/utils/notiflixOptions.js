@@ -1,9 +1,8 @@
 import Notiflix from 'notiflix';
 
-// Объект настроек библиотеки Notiflix.Notify
 const notiflixOptions = Notiflix.Notify.init({
   width: '300px',
-  position: 'right-top', // 'right-top' - 'right-bottom' - 'left-top' - 'left-bottom' - 'center-top' - 'center-bottom' - 'center-center'
+  position: 'right-top',
   distance: '20px',
   opacity: 1,
   borderRadius: '20px',
@@ -24,11 +23,11 @@ const notiflixOptions = Notiflix.Notify.init({
   fontSize: '16px',
   cssAnimation: true,
   cssAnimationDuration: 400,
-  cssAnimationStyle: 'fade', // 'fade' - 'zoom' - 'from-right' - 'from-top' - 'from-bottom' - 'from-left'
+  cssAnimationStyle: 'fade',
   closeButton: false,
   useIcon: true,
   useFontAwesome: false,
-  fontAwesomeIconStyle: 'basic', // 'basic' - 'shadow'
+  fontAwesomeIconStyle: 'basic',
   fontAwesomeIconSize: '18px',
 
   success: {

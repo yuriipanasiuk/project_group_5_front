@@ -15,7 +15,6 @@ export const theme = {
     bold: 700,
   },
   colors: {
-    // light
     bgc: '#fdf7f2',
     bgcContrast: '#fdf7f2',
     bgcContent: '#ffffff',

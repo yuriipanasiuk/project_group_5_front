@@ -1,11 +1,11 @@
+import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
 import { Formik } from 'formik';
 
 import { ModalTitle } from 'components/ModalTitle/ModalTitle';
 import { Button } from 'components/Button/Button';
-import { useDispatch } from 'react-redux';
 import authOperations from '../../redux/auth/operations';
+import { schema } from 'utils/loginValidationSchema';
 
 import {
   Wraper,
@@ -23,7 +23,6 @@ import {
   IconWraper,
   EmailWraper,
 } from './LoginForm.styled';
-import { schema } from 'utils/loginValidationSchema';
 
 const initialValues = { email: '', password: '' };
 
@@ -46,10 +45,6 @@ export const LoginForm = () => {
   const onShowPassword = () => {
     setShowPassword(prevState => !prevState);
     setInputType(prevState => !prevState);
-  };
-
-  const onHandleClick = () => {
-    // console.log('must redirect on another page');
   };
 
   return (
@@ -84,12 +79,7 @@ export const LoginForm = () => {
             </InputPasswordWraper>
 
             <ButtonWraper>
-              <Button
-                style={StyledButton}
-                type="submit"
-                onClick={onHandleClick}
-                children="Login"
-              />
+              <Button style={StyledButton} type="submit" children="Login" />
             </ButtonWraper>
             <LinkWraper>
               <LinkText>Don't have an account? </LinkText>

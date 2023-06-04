@@ -1,5 +1,5 @@
 export const endPoints = Object.freeze({
-  baseUrl: 'https://petssuport4815162342api.onrender.com/',
+  baseUrl: 'https://pets-r6bp.onrender.com/',
   limit: 8,
   pathSell: '/notices/sell/p',
   pathLostFound: '/notices/lost_found/p',

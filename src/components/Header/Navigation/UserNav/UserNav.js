@@ -2,7 +2,6 @@ import {
   AccountBtn,
   AccountBtnWrapper,
   AccountBtnText,
-  // AccountBtnIcon,
 } from './UserNav.styled';
 import { ReactComponent as AccountBtnIconComp } from '../../../../assets/icons/accountBtnIcon.svg';
 

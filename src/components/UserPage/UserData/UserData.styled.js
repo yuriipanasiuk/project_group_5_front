@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   max-width: 320px;
-  /* margin-right: auto;
-  margin-left: auto; */
 
   padding-top: 60px;
   @media (min-width: ${p => p.theme.screenSizes.tablet}) {
@@ -34,7 +32,7 @@ export const UserPageHeader = styled.h2`
   }
   @media (min-width: ${p => p.theme.screenSizes.desktop}) {
     margin-bottom: 24px;
-  } ;
+  }
 `;
 
 export const UserInfoCard = styled.div`

@@ -100,12 +100,6 @@ export const AddModalNotice = ({ handleModalToggle }) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
-  // const moveNextRegistration = () => {
-  //   isFirstRegisterStep
-  //     ? setIsFirstRegisterStep(false)
-  //     : setIsFirstRegisterStep(true);
-  // };
-
   const categorySetByDefault = () => {
     let enterPoint = pathname.split('/').pop();
 

@@ -5,7 +5,6 @@ import { IoClose } from 'react-icons/io5';
 
 import { Container } from '../Container/Container';
 import {
-  // Container,
   BurgerMenu,
   MenuList,
   Appbar,
@@ -18,11 +17,8 @@ import {
   OpenMenuIcon,
   HeaderDescNav,
 } from './Header.styled';
-import { useState, useEffect } from 'react';
 
-import openMenuSvg from '../../assets/menu-icons/open-menu.svg';
-import closeMenuSvg from '../../assets/menu-icons/close-menu.svg';
-// import { NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
 import { Navigation } from './Navigation/Nav/Nav';
 import { AuthNav } from './Navigation/AuthNav/AuthNav';
 import { useSelector, useDispatch } from 'react-redux';
@@ -35,9 +31,7 @@ export const Header = ({ toggleTheme, theme }) => {
   const dispatch = useDispatch();
   const menuState = useSelector(state => state.menuState.isMenuOpen);
 
-  // const [isMenuOpen, setIsMenuOpen] = useState(false);
-  //   const handleMenuClick = {};
-  // const isLoggedIn = false;
+
   useEffect(() => {
     if (menuState) {
       document.body.classList.add('no-scroll');
@@ -48,17 +42,13 @@ export const Header = ({ toggleTheme, theme }) => {
 
   const handleCloseMenu = () => {
     dispatch(closeMenu());
-    // setIsMenuOpen(false);
   };
+
   const handleOpenMenu = () => {
-    // setIsMenuOpen(true);
     dispatch(openMenu());
   };
 
-  const handleMenu = () => {
-    // setIsMenuOpen(isMenuOpen === false ? true : false);
-    dispatch(toggleMenu(isMenuOpen === false ? true : false));
-  };
+
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
@@ -123,11 +113,7 @@ export const Header = ({ toggleTheme, theme }) => {
                   <OpenMenuIcon>
                     <GiHamburgerMenu onClick={handleOpenMenu} size={30} />
                   </OpenMenuIcon>
-                  {/* <OpenMenuIcon
-                    src={openMenuSvg}
-                    alt=""
-                    onClick={handleOpenMenu}
-                  /> */}
+          
                 </HeaderTabRight>
               </>
             ) : (
@@ -147,11 +133,7 @@ export const Header = ({ toggleTheme, theme }) => {
                   <TabAuthWrap>
                     <AuthNav onClick={handleCloseMenu} />
                   </TabAuthWrap>
-                  {/* <OpenMenuIcon
-                    src={openMenuSvg}
-                    alt=""
-                    onClick={handleOpenMenu}
-                  /> */}
+        
                   <OpenMenuIcon>
                     <GiHamburgerMenu onClick={handleOpenMenu} size={30} />
                   </OpenMenuIcon>

@@ -1,4 +1,6 @@
 import { useRef, useState } from 'react';
+import { GoSearch } from 'react-icons/go';
+import { RiCloseCircleLine } from 'react-icons/ri';
 
 import {
   SearchForm,
@@ -7,13 +9,7 @@ import {
   InputLabel,
 } from './NewsForm.styled';
 
-import { GoSearch } from "react-icons/go";
-import { RiCloseCircleLine } from "react-icons/ri";
-
-// import { ReactComponent as SearchIcon } from '../../../assets/icons/searchIcon.svg';
-// import { ReactComponent as ResetForm } from '../../../assets/icons/resetForm.svg';
-
-export const NewsForm = ({onSubmit, onClear}) => {
+export const NewsForm = ({ onSubmit, onClear }) => {
   const [value, setValue] = useState('');
   const windowWidth = useRef(window.innerWidth);
   const smallScreen = windowWidth.current < 768;
@@ -21,40 +17,40 @@ export const NewsForm = ({onSubmit, onClear}) => {
   function handleSubmit(e) {
     e.preventDefault();
     onSubmit(e);
-  };
+  }
 
-  function handleInput(e){
+  function handleInput(e) {
     setValue(e.target.value.trim());
     onSubmit(e);
   }
-  
+
   const handleClear = e => {
     setValue('');
     onClear();
-  }
+  };
 
   return (
-      <SearchForm onSubmit={handleSubmit}>
-        <InputLabel htmlFor="search">
-          <SearchField
-            // onInput={e => setValue(e.target.value.trim())}
-            onInput={e => handleInput(e)}
-            type="text"
-            placeholder="Search"
-            name="search"
-            id="search"
-            value={value}
-          />
-          <SearchBtn type={smallScreen ? 'submit' : 'button'}>
-            {value && !smallScreen ? (
-            <RiCloseCircleLine size={24} onClick={handleClear} />
-            // <GoSearch onClick={handleClear}/>
-            ) : (
-              // <SearchIcon />
-              <GoSearch size={20} />
+    <SearchForm onSubmit={handleSubmit}>
+      <InputLabel htmlFor="search">
+        <SearchField
+          onInput={e => handleInput(e)}
+          type="text"
+          placeholder="Search"
+          name="search"
+          id="search"
+          value={value}
+        />
+        <SearchBtn type={smallScreen ? 'submit' : 'button'}>
+          {value &&
+            !smallScreen(
+              <>
+                <RiCloseCircleLine size={24} onClick={handleClear} />
+
+                <GoSearch size={20} />
+              </>
             )}
-          </SearchBtn>
-        </InputLabel>
-      </SearchForm>
+        </SearchBtn>
+      </InputLabel>
+    </SearchForm>
   );
 };

@@ -21,7 +21,6 @@ export const StyledModal = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* max-height: 100%; */
   max-height: 95%;
   border-radius: 20px;
   background-color: #ffffff;

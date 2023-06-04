@@ -3,9 +3,8 @@ import { Routes, Route, Navigate, useSearchParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import authOperations from '../redux/auth/operations';
 
-// change theme
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../utils/theme';
+
 import { themeDark, themeLight } from '../utils/theme';
 import GlobalStyle from 'utils/GlobalStyle';
 
@@ -13,8 +12,6 @@ import { SharedLayout } from './SharedLayout/SharedLayout';
 import NewsPage from '../pages/NewsPage';
 import { NoticesList } from './NoticesList/NoticesList';
 import { PrivateRoute } from './PrivateRoute';
-import { Loader } from 'components/Loader/Loader';
-import { selectIsRefreshing } from 'redux/auth/selectors';
 import { RestrictedRoute } from './RestrictedRoute';
 
 const FriendsPage = lazy(() => import('../pages/FriendsPage'));
@@ -32,7 +29,6 @@ const ConfirmEmail = lazy(() =>
 );
 
 export const App = () => {
-  // for change theme
   const [theme, setTheme] = useState(themeLight);
 
   const toggleTheme = () => {

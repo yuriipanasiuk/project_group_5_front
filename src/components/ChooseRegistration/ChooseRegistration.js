@@ -18,7 +18,7 @@ export const ChooseRegistration = () => {
 
       <Text>or</Text>
 
-      <Link to="https://petssuport4815162342api.onrender.com/api/users/google">
+      <Link to="https://pets-r6bp.onrender.com/api/users/google">
         <GoogleIcon src={Icon} alt="Google Icon" />
         <p>Continue with Google</p>
       </Link>

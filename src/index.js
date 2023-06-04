@@ -4,14 +4,11 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { App } from 'components/App';
-// import { ThemeProvider } from 'styled-components';
-// import { theme } from 'utils/theme';
 import './index.css';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistor, store } from './redux/store';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <ThemeProvider theme={theme}>
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
@@ -21,5 +18,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </PersistGate>
     </Provider>
   </React.StrictMode>
-  // </ThemeProvider>
 );
